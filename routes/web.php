@@ -18,15 +18,10 @@ use App\Models\Karyawan;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
+
 use Psy\VarDumper\Presenter;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
-
-Route::get('/storage-link', function () {
-    Artisan::call('storage:link');
-    return 'Storage link Sukses';
-});
 
 
 Route::middleware(['guest:karyawan'])->group(function () {
